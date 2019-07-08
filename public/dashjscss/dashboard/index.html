@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Dashboard</title >    <link rel="apple-touch-icon" href="https://pos.ultimatekode.com/app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pos.ultimatekode.com/app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+          rel="stylesheet">
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/app-assets/ltr/vendors.css">
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/app-assets/vendors/css/extensions/unslider.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/app-assets/fonts/meteocons/style.css">
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/vendors/css/tables/datatable/datatables.min.css">
+      <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/vendors/css/tables/extensions/buttons.dataTables.min.css">
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN STACK CSS-->
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/app-assets/ltr/app.css">
+    <!-- END STACK CSS-->
+    <!-- BEGIN Page Level CSS-->
+
+    <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/ltr/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/ltr/core/colors/palette-gradient.css">
+    <link rel="stylesheet" href="https://pos.ultimatekode.com/assets/custom/datepicker.min.css?v=3.552">
+    <link rel="stylesheet" href="https://pos.ultimatekode.com/assets/custom/summernote-bs4.css?v=3.552">
+    <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/vendors/css/forms/selects/select2.min.css">
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="https://pos.ultimatekode.com/assets/css/style.css?v=3.552">
+    <!-- END Custom CSS-->
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/vendors.min.js"></script>
+    <script type="text/javascript" src="https://pos.ultimatekode.com/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+    <script type="text/javascript"
+            src="https://pos.ultimatekode.com/app-assets/vendors/js/charts/jquery.sparkline.min.js"></script>
+    <script src="https://pos.ultimatekode.com/assets/portjs/raphael.min.js" type="text/javascript"></script>
+    <script src="https://pos.ultimatekode.com/assets/portjs/morris.min.js" type="text/javascript"></script>
+    <script src="https://pos.ultimatekode.com/assets/myjs/datepicker.min.js?v=3.552"></script>
+    <script src="https://pos.ultimatekode.com/assets/myjs/summernote-bs4.min.js?v=3.552"></script>
+    <script src="https://pos.ultimatekode.com/assets/myjs/select2.min.js?v=3.552"></script>
+    <script type="text/javascript">var baseurl = 'https://pos.ultimatekode.com/';
+        var crsf_token = 'g_ea0d';
+        var crsf_hash = '492717f74d74cf5437a35dd697ec35fc';
+    </script>
+
+</head>
+
+ <link rel="stylesheet" type="text/css"
+          href="https://pos.ultimatekode.com/app-assets/ltr/core/menu/menu-types/horizontal-menu.css">
+</head>
+<body class="horizontal-layout horizontal-menu 2-columns menu-expanded" data-open="hover" data-menu="horizontal-menu"
+      data-col="2-columns">
+<span id="hdata"
+      data-df="dd-mm-yyyy"
+      data-curr="$"></span>
+<!-- fixed-top-->
+<nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-static-top navbar-dark bg-gradient-x-grey-blue navbar-border navbar-brand-center">
+    <div class="navbar-wrapper">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mobile-menu d-md-none mr-auto"><a
+                            class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i
+                                class="ft-menu font-large-1"></i></a></li>
+                <li class="nav-item"><a class="navbar-brand" href="https://pos.ultimatekode.com/dashboard/"><img
+                                class="brand-logo" alt="logo"
+                                src="https://pos.ultimatekode.com/userfiles/theme/logo-header.png">
+                    </a></li>
+                <li class="nav-item d-md-none"><a class="nav-link open-navbar-container" data-toggle="collapse"
+                                                  data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-container content">
+            <div class="collapse navbar-collapse" id="navbar-mobile">
+                <ul class="nav navbar-nav mr-auto float-left">
+                    <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs"
+                                                              href="#"><i class="ft-menu"></i></a></li>
+
+
+                    <li class="dropdown  nav-item"><a class="nav-link nav-link-label" href="#"
+                                                      data-toggle="dropdown"><i
+                                    class="ficon ft-map-pin success"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-media dropdown-menu-left">
+                            <li class="dropdown-menu-header">
+                                <h6 class="dropdown-header m-0"><span
+                                            class="grey darken-2"><i
+                                                class="ficon ft-map-pin success"></i>Business Location</span>
+                                </h6>
+                            </li>
+
+                            <li class="dropdown-menu-footer"><span class="dropdown-item text-muted text-center blue"
+                                > ABC Company</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item d-none d-md-block nav-link "><a href="https://pos.ultimatekode.com/pos_invoices/create"
+                                                                        class="btn btn-info btn-md t_tooltip"
+                                                                        title="Access POS"><i
+                                    class="icon-handbag"></i>POS </a>
+                    </li>
+                    <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#" aria-haspopup="true"
+                                                       aria-expanded="false" id="search-input"><i
+                                    class="ficon ft-search"></i></a>
+                        <div class="search-input">
+                            <input class="input" type="text"
+                                   placeholder="Search Customer... "
+                                   id="head-customerbox">
+                        </div>
+                        <div id="head-customerbox-result" class="dropdown-menu ml-5"
+                             aria-labelledby="search-input"></div>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav float-right">                        <li class="dropdown nav-item mega-dropdown"><a class="dropdown-toggle nav-link " href="#"
+                                                                       data-toggle="dropdown">Business Settings</a>
+                            <ul class="mega-dropdown-menu dropdown-menu row">
+                                <li class="col-md-3">
+
+                                    <div id="accordionWrap" role="tablist" aria-multiselectable="true">
+                                        <div class="card border-0 box-shadow-0 collapse-icon accordion-icon-rotate">
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading1" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap" href="#accordion1"
+                                                   aria-controls="accordion1"><i
+                                                            class="fa fa-leaf"></i> Business  Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion1" role="tabpanel"
+                                                 aria-labelledby="heading1" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/company"><i
+                                                                        class="ft-chevron-right"></i> Company Settings                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/locations"><i
+                                                                        class="ft-chevron-right"></i>Business Locations                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/tools/setgoals"><i
+                                                                        class="ft-chevron-right"></i> Set Goals                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading2" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap" href="#accordion2"
+                                                   aria-controls="accordion2"> <i
+                                                            class="fa fa-calendar"></i>Localisation                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion2" role="tabpanel"
+                                                 aria-labelledby="heading2" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/currency"><i
+                                                                        class="ft-chevron-right"></i> Currency                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/language"><i
+                                                                        class="ft-chevron-right"></i>Languages</a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/dtformat"><i
+                                                                        class="ft-chevron-right"></i> Date & Time Format                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/theme"><i
+                                                                        class="ft-chevron-right"></i> Theme                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading3" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap" href="#accordion3"
+                                                   aria-controls="accordion3"> <i
+                                                            class="fa fa-lightbulb-o"></i>Miscellaneous Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion3" role="tabpanel"
+                                                 aria-labelledby="heading3" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/webupdate"><i
+                                                                        class="ft-chevron-right"></i> Software
+                                                                Update</a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/email"><i
+                                                                        class="ft-chevron-right"></i>Email Config                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/transactions/categories"><i
+                                                                        class="ft-chevron-right"></i>Transaction Categories                                                            </a></li>
+                                                            <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/misc_automail"><i
+                                                                        class="ft-chevron-right"></i> Email Alert                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/about"><i
+                                                                        class="ft-chevron-right"></i> About                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-md-3">
+
+                                    <div id="accordionWrap1" role="tablist" aria-multiselectable="true">
+                                        <div class="card border-0 box-shadow-0 collapse-icon accordion-icon-rotate">
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading4" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap1" href="#accordion4"
+                                                   aria-controls="accordion4"><i
+                                                            class="fa fa-fire"></i>Advanced Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion4" role="tabpanel"
+                                                 aria-labelledby="heading4" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/restapi"><i
+                                                                        class="ft-chevron-right"></i> REST API                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/cronjob"><i
+                                                                        class="ft-chevron-right"></i>Automatic Cron Job                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/custom_fields"><i
+                                                                        class="ft-chevron-right"></i> Custom Fields                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/dual_entry"><i
+                                                                        class="ft-chevron-right"></i> Dual Entry Accounting                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/logdata"><i
+                                                                        class="ft-chevron-right"></i> Application
+                                                                Activity Log</a>
+                                                        </li>
+                                                           <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/debug"><i
+                                                                        class="ft-chevron-right"></i> Debug Mode </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading2" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap1" href="#accordion5"
+                                                   aria-controls="accordion5"> <i
+                                                            class="fa fa-shopping-cart"></i>Billing Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion5" role="tabpanel"
+                                                 aria-labelledby="heading5" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/discship"><i
+                                                                        class="ft-chevron-right"></i>  Discount &  Shipping                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/prefix"><i
+                                                                        class="ft-chevron-right"></i>Prefix                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/billing_terms"><i
+                                                                        class="ft-chevron-right"></i> Billing Terms                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/automail"><i
+                                                                        class="ft-chevron-right"></i> Auto Email SMS                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/warehouse"><i
+                                                                        class="ft-chevron-right"></i> Default Warehouse                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/zero_stock"><i
+                                                                        class="ft-chevron-right"></i> Zero Stock Billing                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/pos_style"><i
+                                                                        class="ft-chevron-right"></i>POS Style                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading6" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap1" href="#accordion6"
+                                                   aria-controls="accordion6"><i
+                                                            class="fa fa-scissors"></i>Tax Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion6" role="tabpanel"
+                                                 aria-labelledby="heading6" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/tax"><i
+                                                                        class="ft-chevron-right"></i>Tax                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/taxslabs"><i
+                                                                        class="ft-chevron-right"></i> Other Tax Settings                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-md-3">
+
+                                    <div id="accordionWrap2" role="tablist" aria-multiselectable="true">
+                                        <div class="card border-0 box-shadow-0 collapse-icon accordion-icon-rotate">
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading7" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap2" href="#accordion7"
+                                                   aria-controls="accordion7"><i
+                                                            class="fa fa-flask"></i>Products Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion7" role="tabpanel"
+                                                 aria-labelledby="heading7" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/units"><i
+                                                                        class="ft-chevron-right"></i>Measurement Unit                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/units/variations"><i
+                                                                        class="ft-chevron-right"></i> Products Variations                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/units/variables"><i
+                                                                        class="ft-chevron-right"></i> Variations Variables                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading8" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap2" href="#accordion8"
+                                                   aria-controls="accordion8"> <i
+                                                            class="fa fa-money"></i>Payment Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion8" role="tabpanel"
+                                                 aria-labelledby="heading8" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/paymentgateways/settings"><i
+                                                                        class="ft-chevron-right"></i>Payment Settings                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/paymentgateways"><i
+                                                                        class="ft-chevron-right"></i> Payment Gateways                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/paymentgateways/currencies"><i
+                                                                        class="ft-chevron-right"></i> Payment Currencies                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/paymentgateways/exchange"><i
+                                                                        class="ft-chevron-right"></i> Currency Exchange                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/paymentgateways/bank_accounts"><i
+                                                                        class="ft-chevron-right"></i> Bank Accounts                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading9" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap2" href="#accordion9"
+                                                   aria-controls="accordion9"><i
+                                                            class="fa fa-umbrella"></i>CRM & HRM Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion9" role="tabpanel"
+                                                 aria-labelledby="heading9" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/employee/auto_attendance"><i
+                                                                        class="ft-chevron-right"></i>Self Attendance                                                            </a></li>
+
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/registration"><i
+                                                                        class="ft-chevron-right"></i> CRM Settings                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/plugins/recaptcha"><i
+                                                                        class="ft-chevron-right"></i>Security                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/tickets"><i
+                                                                        class="ft-chevron-right"></i> Support Tickets                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="col-md-3">
+
+                                    <div id="accordionWrap3" role="tablist" aria-multiselectable="true">
+                                        <div class="card border-0 box-shadow-0 collapse-icon accordion-icon-rotate">
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading10" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap3" href="#accordion10"
+                                                   aria-controls="accordion10"><i
+                                                            class="fa fa-magic"></i>Plugins Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion10" role="tabpanel"
+                                                 aria-labelledby="heading10" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/plugins/recaptcha"><i
+                                                                        class="ft-chevron-right"></i>reCaptcha Security</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/plugins/shortner"><i
+                                                                        class="ft-chevron-right"></i> URL Shortener</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/plugins/twilio"><i
+                                                                        class="ft-chevron-right"></i> SMS Configuration</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/paymentgateways/exchange"><i
+                                                                        class="ft-chevron-right"></i>Currency Exchange
+                                                                API</a></li>
+                                                            <li><a class="dropdown-item"
+                                                           href="https://pos.ultimatekode.com/woocommerce"><i
+                                                                    class="ft-chevron-right"></i> WooCommerce
+                                                        </a></li>                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading11" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap3" href="#accordion11"
+                                                   aria-controls="accordion11"> <i
+                                                            class="fa fa-eye"></i>Templates Settings                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion11" role="tabpanel"
+                                                 aria-labelledby="heading8" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/templates/email"><i
+                                                                        class="ft-chevron-right"></i> Email                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/templates/sms"><i
+                                                                        class="ft-chevron-right"></i> SMS</a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/print_invoice"><i
+                                                                        class="ft-chevron-right"></i> Print Invoice                                                            </a></li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/settings/theme"><i
+                                                                        class="ft-chevron-right"></i>Theme                                                            </a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-header p-0 pb-1 border-0 mt-1" id="heading12" role="tab">
+                                                <a class=" text-uppercase black" data-toggle="collapse"
+                                                   data-parent="#accordionWrap3" href="#accordion12"
+                                                   aria-controls="accordion12"><i
+                                                            class="fa fa-print"></i>POS Printers</a>
+                                                </a></div>
+                                            <div class="card-collapse collapse mb-1 " id="accordion12" role="tabpanel"
+                                                 aria-labelledby="heading12" aria-expanded="true">
+                                                <div class="card-content">
+                                                    <ul>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/printer/add"><i
+                                                                        class="ft-chevron-right"></i>Add Printer</a>
+                                                        </li>
+                                                        <li><a class="dropdown-item"
+                                                               href="https://pos.ultimatekode.com/printer"><i
+                                                                        class="ft-chevron-right"></i> List Printers</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </li>                           <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#"
+                                                                           data-toggle="dropdown"><i
+                                    class="ficon ft-bell"></i><span
+                                    class="badge badge-pill badge-default badge-danger badge-default badge-up"
+                                    id="taskcount">0</span></a>
+                        <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                            <li class="dropdown-menu-header">
+                                <h6 class="dropdown-header m-0"><span
+                                            class="grey darken-2">Pending Tasks</span><span
+                                            class="notification-tag badge badge-default badge-danger float-right m-0">New</span>
+                                </h6>
+                            </li>
+                            <li class="scrollable-container media-list" id="tasklist"></li>
+                            <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center"
+                                                                href="https://pos.ultimatekode.com/manager/todo">Manage tasks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#"
+                                                                           data-toggle="dropdown"><i
+                                    class="ficon ft-mail"></i><span
+                                    class="badge badge-pill badge-default badge-info badge-default badge-up">0</span></a>
+                        <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                            <li class="dropdown-menu-header">
+                                <h6 class="dropdown-header m-0"><span
+                                            class="grey darken-2">Messages</span><span
+                                            class="notification-tag badge badge-default badge-warning float-right m-0">0</span>
+                                </h6>
+                            </li>
+                            <li class="scrollable-container media-list">
+                                    </li>
+                            <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center"
+                                                                href="https://pos.ultimatekode.com/messages">Read all messages</a>
+                            </li>
+                        </ul>
+                    </li>
+                                            <li class="dropdown dropdown-d nav-item">
+
+
+                             <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon icon-clock"></i><span class="badge badge-pill badge-default badge-warning badge-default badge-up">Off</span></a>
+                            <ul class="dropdown-menu dropdown-menu-right border-primary border-lighten-3 text-xs-center">
+                                <br><br>
+                                <span class="p-1 text-bold-300">Attendance:</span><a href="https://pos.ultimatekode.com//dashboard/clock_in" class="btn btn-outline-success  btn-outline-white btn-md ml-1 mr-1" ><span class="icon-toggle-on" aria-hidden="true"></span> Clock In <i
+                                    class="ficon icon-clock spinner"></i></a>
+                                <br><br>
+                            </ul>
+                        </li>
+                                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link"
+                                                                   href="#" data-toggle="dropdown"><span
+                                    class="avatar avatar-online"><img
+                                        src="https://pos.ultimatekode.com/userfiles/employee/thumbnail/example.png"
+                                        alt="avatar"><i></i></span><span
+                                    class="user-name">Account</span></a>
+                        <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item"
+                                                                          href="https://pos.ultimatekode.com/user/profile"><i
+                                        class="ft-user"></i> Profile</a>
+                            <a href="https://pos.ultimatekode.com/user/attendance"
+                               class="dropdown-item"><i
+                                        class="fa fa-list-ol"></i>Attendance</a>
+                            <a href="https://pos.ultimatekode.com/user/holidays"
+                               class="dropdown-item"><i
+                                        class="fa fa-hotel"></i>Holidays</a>
+
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/user/logout"><i
+                                        class="ft-power"></i> Logout</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- ////////////////////////////////////////////////////////////////////////////-->
+<!-- Horizontal navigation-->
+<div class="header-navbar navbar-expand-sm navbar navbar-horizontal navbar-fixed navbar-light navbar-without-dd-arrow navbar-shadow menu-border"
+     role="navigation" data-menu="menu-wrapper">
+    <!-- Horizontal menu content-->
+    <div class="navbar-container main-menu-content" data-menu="menu-container">
+
+        <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+            <li class="nav-item"><a class="nav-link" href="https://pos.ultimatekode.com/dashboard/"><i
+                            class="icon-speedometer"></i><span>Dashboard</span></a>
+
+            </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-basket-loaded"></i><span>Sales</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-paper-plane"></i>POS Sales</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/pos_invoices/create"
+                                                    data-toggle="dropdown">New Invoice</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/pos_invoices/create?v2=true"
+                                                    data-toggle="dropdown">New Invoice                                        V2 - Mobile</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/pos_invoices"
+                                                    data-toggle="dropdown">Manage Invoices</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-basket"></i>Sales</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/invoices/create"
+                                                    data-toggle="dropdown">New Invoice</a>
+                                </li>
+
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/invoices"
+                                                    data-toggle="dropdown">Manage Invoices</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-call-out"></i>Quotes</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/quote/create"
+                                                    data-toggle="dropdown">New Quote</a>
+                                </li>
+
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/quote"
+                                                    data-toggle="dropdown">Manage Quotes</a>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="ft-radio"></i>Subscriptions</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/subscriptions/create"
+                                                    data-toggle="dropdown">New Subscription</a>
+                                </li>
+
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/subscriptions"
+                                                    data-toggle="dropdown">Subscriptions</a>
+                            </ul>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/stockreturn/creditnotes"><i
+                                        class="icon-screen-tablet"></i>Credit Notes                            </a>
+                        </li>
+                    </ul>
+                </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="ft-layers"></i><span>Stock</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="ft-list"></i> Items Manager</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/products/add"
+                                                    data-toggle="dropdown"> New Product</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/products"
+                                                    data-toggle="dropdown">Manage Products</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li data-menu=""><a class="dropdown-item"
+                                            href="https://pos.ultimatekode.com/productcategory"
+                                            data-toggle="dropdown"><i
+                                        class="ft-umbrella"></i>Product Categories                            </a>
+                        </li>
+                        <li data-menu=""><a class="dropdown-item"
+                                            href="https://pos.ultimatekode.com/productcategory/warehouse"
+                                            data-toggle="dropdown"><i
+                                        class="ft-sliders"></i>Warehouses</a>
+                        </li>
+                        <li data-menu=""><a class="dropdown-item"
+                                            href="https://pos.ultimatekode.com/products/stock_transfer"
+                                            data-toggle="dropdown"><i
+                                        class="ft-wind"></i>Stock Transfer</a>
+                        </li>
+                        </li>
+
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-handbag"></i> Purchase Order</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/purchase/create"
+                                                    data-toggle="dropdown"> New Order</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/purchase"
+                                                    data-toggle="dropdown">Manage Orders</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-puzzle"></i> Stock Return</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/stockreturn"
+                                                    data-toggle="dropdown"> Suppliers Records</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/stockreturn/customer"
+                                                    data-toggle="dropdown">Customers Records</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="ft-target"></i>Suppliers</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/supplier/create"
+                                                    data-toggle="dropdown">New Supplier</a>
+                                </li>
+
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/supplier"
+                                                    data-toggle="dropdown">Manage Suppliers</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-diamond"></i><span>CRM</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="ft-users"></i>Clients</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/customers/create"
+                                                    data-toggle="dropdown">New Client</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/customers"
+                                                    data-toggle="dropdown">Manage Clients</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/clientgroup"><i
+                                        class="icon-grid"></i>Client Groups</a>
+                        </li>
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="fa fa-ticket"></i>Support Tickets</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/tickets/?filter=unsolved"
+                                                    data-toggle="dropdown">UnSolved</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/tickets"
+                                                    data-toggle="dropdown">Manage Tickets</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-briefcase"></i><span>Project</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-calendar"></i>Project Management                            </a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/projects/addproject"
+                                                    data-toggle="dropdown">New Project</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/projects"
+                                                    data-toggle="dropdown">Manage Projects</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/tools/todo"><i
+                                        class="icon-list"></i>To Do List</a>
+                        </li>
+
+                    </ul>
+                </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-calculator"></i><span>Accounts</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-book-open"></i>Accounts</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/accounts"
+                                                    data-toggle="dropdown">Manage Accounts</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/accounts/balancesheet"
+                                                    data-toggle="dropdown">BalanceSheet</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/accountstatement"
+                                                    data-toggle="dropdown">Account Statements</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-wallet"></i>Transactions</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/transactions"
+                                                    data-toggle="dropdown">View Transactions</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/transactions/add"
+                                                    data-toggle="dropdown">New Transaction</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/transactions/transfer"
+                                                    data-toggle="dropdown">New Transfer</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/transactions/income"
+                                                    data-toggle="dropdown">Income</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/transactions/expense"
+                                                    data-toggle="dropdown">Expense</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/customers"
+                                                    data-toggle="dropdown">Clients Transactions</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-energy"></i><span>Promo Codes</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-trophy"></i>Coupons</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/promo/create"
+                                                    data-toggle="dropdown">New Promo</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/promo"
+                                                    data-toggle="dropdown">Manage Promo</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </li>
+
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-pie-chart"></i><span>Data & Reports</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/register"><i
+                                        class="icon-eyeglasses"></i>Business Registers                            </a>
+                        </li>
+
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-doc"></i>Statements</a>
+                            <ul class="dropdown-menu">
+
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/accountstatement"
+                                                    data-toggle="dropdown">Account Statements</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/customerstatement"
+                                                    data-toggle="dropdown">Customer Account Statements</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/supplierstatement"
+                                                    data-toggle="dropdown">Supplier Account Statements</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/taxstatement"
+                                                    data-toggle="dropdown">TAX Statements</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-bar-chart"></i>Graphical Reports                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/chart/product_cat"
+                                                    data-toggle="dropdown">Product Categories</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/chart/trending_products"
+                                                    data-toggle="dropdown">Trending Products</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/chart/profit"
+                                                    data-toggle="dropdown">Profit</a>
+                                </li>
+
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/chart/topcustomers"
+                                                    data-toggle="dropdown"> Customers</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/chart/incvsexp"
+                                                    data-toggle="dropdown">Income vs Expenses</a>
+                                </li>
+
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/chart/income"
+                                                    data-toggle="dropdown">Income</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/chart/expenses"
+                                                    data-toggle="dropdown">Expenses</a>
+
+
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="icon-bulb"></i>Summary & Report                            </a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/statistics"
+                                                    data-toggle="dropdown">Statistics</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/profitstatement"
+                                                    data-toggle="dropdown">Profit</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/incomestatement"
+                                                    data-toggle="dropdown">Calculate Income</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/expensestatement"
+                                                    data-toggle="dropdown">Calculate Expenses</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/reports/sales"
+                                                    data-toggle="dropdown">Sales</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/products"
+                                                    data-toggle="dropdown">Products</a>
+                                </li>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/reports/commission"
+                                                    data-toggle="dropdown">Employee Commission</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="icon-note"></i><span>Miscellaneous</span></a>
+                    <ul class="dropdown-menu">
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/tools/notes"><i
+                                        class="icon-note"></i>Notes</a>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/events"><i
+                                        class="icon-calendar"></i>Calendar</a>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/tools/documents"><i
+                                        class="icon-doc"></i>Documents</a>
+                        </li>
+
+
+                    </ul>
+                </li>
+                            <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#"
+                                                                      data-toggle="dropdown"><i
+                                class="ft-file-text"></i><span>HRM</span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a
+                                    class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown"><i
+                                        class="ft-users"></i>Employees</a>
+                            <ul class="dropdown-menu">
+                                <li data-menu=""><a class="dropdown-item" href="https://pos.ultimatekode.com/employee"
+                                                    data-toggle="dropdown">Employees</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/employee/permissions"
+                                                    data-toggle="dropdown">Permissions</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/employee/salaries"
+                                                    data-toggle="dropdown">Salaries</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/employee/attendances"
+                                                    data-toggle="dropdown">Attendance</a>
+                                </li>
+                                <li data-menu=""><a class="dropdown-item"
+                                                    href="https://pos.ultimatekode.com/employee/holidays"
+                                                    data-toggle="dropdown">Holidays</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/employee/departments"><i
+                                        class="icon-folder"></i>Departments</a>
+                        </li>
+                        <li data-menu="">
+                            <a class="dropdown-item" href="https://pos.ultimatekode.com/employee/payroll"><i
+                                        class="icon-notebook"></i>Payroll</a>
+                        </li>
+
+                    </ul>
+                </li>
+                            <li class="dropdown mega-dropdown nav-item" data-menu="megamenu"><a class="dropdown-toggle nav-link"
+                                                                                    href="#" data-toggle="dropdown"><i
+                                class="ft-bar-chart-2"></i><span>Backup & Export-Import</span></a>
+                    <ul class="mega-dropdown-menu dropdown-menu row">
+                        <li class="col-md-4" data-mega-col="col-md-3">
+                            <ul class="drilldown-menu">
+                                <li class="menu-list">
+                                    <ul class="mega-menu-sub">
+                                        <li><a class="dropdown-item" href="https://pos.ultimatekode.com/export/crm"><i
+                                                        class="fa fa-caret-right"></i>Export People Data                                            </a>
+                                        </li>
+                                        <li><a class="dropdown-item"
+                                               href="https://pos.ultimatekode.com/export/transactions"><i
+                                                        class="fa fa-caret-right"></i>Export Transactions                                            </a></li>
+                                        <li><a class="dropdown-item" href="https://pos.ultimatekode.com/export/products"><i
+                                                        class="fa fa-caret-right"></i>Export Products                                            </a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="col-md-4" data-mega-col="col-md-3">
+                            <ul class="drilldown-menu">
+                                <li class="menu-list">
+                                    <ul class="mega-menu-sub">
+                                        <li><a class="dropdown-item" href="https://pos.ultimatekode.com/export/account"><i
+                                                        class="fa fa-caret-right"></i>Account Statements                                            </a></li>
+                                        <li><a class="dropdown-item"
+                                               href="https://pos.ultimatekode.com/export/taxstatement"><i
+                                                        class="fa fa-caret-right"></i>TAX Backup & Export                                            </a></li>
+                                        <li><a class="dropdown-item" href="https://pos.ultimatekode.com/export/dbexport"><i
+                                                        class="fa fa-caret-right"></i>Database Backup                                            </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="col-md-4" data-mega-col="col-md-3">
+                            <ul class="drilldown-menu">
+                                <li class="menu-list">
+                                    <ul class="mega-menu-sub">
+                                        <li><a class="dropdown-item" href="https://pos.ultimatekode.com/import/products"><i
+                                                        class="fa fa-caret-right"></i></i>Import Products                                            </a></li>
+                                        <li><a class="dropdown-item" href="https://pos.ultimatekode.com/import/customers"><i
+                                                        class="fa fa-caret-right"></i>Import Customers                                            </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+            
+        </ul>
+    </div>
+    <!-- /horizontal menu content-->
+</div>
+<!-- Horizontal navigation-->
+<div id="c_body"></div>
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-header row">
+        </div>
+        <div class="content-body"><script type="text/javascript">
+    var dataVisits = [
+        { x: '2019-02-16', y: 166292},{ x: '2019-02-15', y: 6639},{ x: '2019-02-14', y: 466},{ x: '2019-02-13', y: 933},{ x: '2019-02-12', y: 1399},{ x: '2019-02-11', y: 466},{ x: '2019-02-10', y: 466},{ x: '2019-02-09', y: 466},{ x: '2019-02-08', y: 2211},{ x: '2019-02-06', y: 3515},{ x: '2019-02-05', y: 1123},{ x: '2019-02-03', y: 1265},    ];
+    var dataVisits2 = [
+        { x: '2019-02-16', y: 10750},];
+
+</script>
+
+<div class="row">
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-2 text-center bg-primary bg-darken-2">
+                        <i class="fa fa-file-text-o text-bold-200  font-large-2 white"></i>
+                    </div>
+                    <div class="p-1 bg-gradient-x-primary white media-body">
+                        <h5>Today Invoices</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-plus"></i> 87</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-2 text-center bg-danger bg-darken-2">
+                        <i class="icon-notebook font-large-2 white"></i>
+                    </div>
+                    <div class="p-1 bg-gradient-x-danger white media-body">
+                        <h5>This Month Invoices</h5>
+                        <h5 class="text-bold-400 mb-0"><i class="ft-arrow-up"></i>111</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-2 text-center bg-warning bg-darken-2">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                    <div class="p-1 bg-gradient-x-warning white media-body">
+                        <h5>Today Sales</h5>
+                        <h5 class="text-bold-400 mb-0"><i
+                                    class="ft-arrow-up"></i>$ 236,398.20                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-2 text-center bg-success bg-darken-2">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                    <div class="p-1 bg-gradient-x-success white media-body">
+                        <h5>This Month Sales</h5>
+                        <h5 class="text-bold-400 mb-0"><i
+                                    class="ft-arrow-up"></i> $ 263,596.42                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-xl-8 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Graphical Presentation of invoices and sales done in last 30 days.</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <div id="products-sales" class="height-300"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <div class="media-body text-left w-100">
+                                            <h3 class="primary">$ 166,292.32</h3>
+                                            <span>Today Income</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="progress progress-sm mt-1 mb-0">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"
+                                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <div class="media-body text-left w-100">
+                                            <h3 class="danger">$ 10,750.00</h3>
+                                            <span>Today Expenses</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="progress progress-sm mt-1 mb-0">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 40%"
+                                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <div class="media-body text-left w-100">
+                                            <h3 class="success">$ 133,018.00</h3>
+                                            <span>Today Profit</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="progress progress-sm mt-1 mb-0">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
+                                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <div class="media-body text-left w-100">
+                                            <h3 class="warning">$ 174,497.84</h3>
+                                            <span>Total Revenue</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="progress progress-sm mt-1 mb-0">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 35%"
+                                             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Recent Buyers</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content px-1">
+                <div id="recent-buyers" class="media-list height-450  mt-1 position-relative">
+                           <a href="https://pos.ultimatekode.com/customers/view?id=1" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/example.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Walk-in Client <span class="font-medium-4 float-right pt-1">$ 227,084.95</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-paid">Paid</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=12" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Wilbur Brumen <span class="font-medium-4 float-right pt-1">$ 1,130.27</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-paid">Paid</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=5" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Stefan Harvie <span class="font-medium-4 float-right pt-1">$ 2,688.25</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-partial">Partial</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=2" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Wyatan Spilsted <span class="font-medium-4 float-right pt-1">$ 5,688.16</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-due">Due</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=3" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Morganne Rignoldes <span class="font-medium-4 float-right pt-1">$ 1,265.29</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-paid">Paid</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=37" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Aeriell Blaxill <span class="font-medium-4 float-right pt-1">$ 1,278.86</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-paid">Paid</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=17" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Alanna Buglass <span class="font-medium-4 float-right pt-1">$ 3,290.00</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-due">Due</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=51" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/example.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">BONNIE <span class="font-medium-4 float-right pt-1">$ 1,820.57</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-partial">Partial</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=10" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Latia Sotheron <span class="font-medium-4 float-right pt-1">$ 10,264.67</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-paid">Paid</span></p>
+                        </div>
+                    </a>       <a href="https://pos.ultimatekode.com/customers/view?id=4" class="media border-0">
+                        <div class="media-left pr-1">
+                            <span class="avatar avatar-md avatar-online"><img class="media-object rounded-circle" src="https://pos.ultimatekode.com/userfiles/customers/thumbnail/default.png">
+                            <i></i>
+                            </span>
+                        </div>
+                        <div class="media-body w-100">
+                            <h6 class="list-group-item-heading">Koralle Romney <span class="font-medium-4 float-right pt-1">$ 8,702.40</span></h6>
+                            <p class="list-group-item-text mb-0"><span class="badge  st-due">Due</span></p>
+                        </div>
+                    </a>
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-xl-8 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Recent Invoices</h4>
+                <a class="heading-elements-toggle"><i class="fa fa-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <p><span class="float-right"> <a
+                                    href="https://pos.ultimatekode.com/invoices/create"
+                                    class="btn btn-primary btn-sm rounded">Add Sale</a>
+                                <a
+                                        href="https://pos.ultimatekode.com/invoices"
+                                        class="btn btn-success btn-sm rounded">Manage Invoices</a>
+                                <a
+                                        href="https://pos.ultimatekode.com/pos_invoices"
+                                        class="btn btn-blue btn-sm rounded">POS</a></span>
+                    </p>
+                </div>
+            </div>
+            <div class="card-content">
+
+                <div class="">
+                    <table id="recent-orders" class="table table-hover mb-1">
+                        <thead>
+                        <tr>
+                            <th>Invoices#</th>
+                            <th>Customer</th>
+                            <th>Status</th>
+                            <th>Due</th>
+                            <th>Amount</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=118">POS #1082</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-paid st-paid">Paid</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 1,124.15</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/invoices/view?id=117">#1031</a></td>
+                             
+                                <td class="text-truncate"> Jameson Satford</td>
+                                <td class="text-truncate"><span class="badge  st-due st-due">Due</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 333.00</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/invoices/view?id=116">#1030</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-due st-due">Due</span></td><td class="text-truncate">17-02-2019</td>
+                                <td class="text-truncate">$ 1,399.73</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=115">POS #1081</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-paid st-paid">Paid</span></td><td class="text-truncate">17-02-2019</td>
+                                <td class="text-truncate">$ 469.58</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=113">POS #1080</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-paid st-paid">Paid</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 1,225.86</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=112">POS #1079</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-paid st-paid">Paid</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 19,565.00</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=111">POS #1078</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-paid st-paid">Paid</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 419.35</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=110">POS #1077</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-paid st-paid">Paid</span></td><td class="text-truncate">17-02-2019</td>
+                                <td class="text-truncate">$ 640.85</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/invoices/view?id=109">#1029</a></td>
+                             
+                                <td class="text-truncate"> BONNIE</td>
+                                <td class="text-truncate"><span class="badge  st-due st-due">Due</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 150.00</td>
+                            </tr>    <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/pos_invoices/view?id=108">POS #1076</a></td>
+                             
+                                <td class="text-truncate"> Walk-in Client</td>
+                                <td class="text-truncate"><span class="badge  st-due st-due">Due</span></td><td class="text-truncate">16-02-2019</td>
+                                <td class="text-truncate">$ 24,222.48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-12">
+        <div class="card">
+
+            <div class="card-header">
+                <div class="header-block">
+                    <h4 class="title">
+                        Income vs Expenses                    </h4></div>
+            </div>
+            <div class="card-body">
+                <div id="salesbreakdown" class="card mt-2"
+                     data-exclude="xs,sm,lg">
+                    <div class="dashboard-sales-breakdown-chart" id="dashboard-sales-breakdown-chart"></div>
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card-group">
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="media-body text-left w-100">
+                                <h3 class="primary"> 19%</h3><span class=" font-medium-1 display-block">February Income</span>                                <span class="font-medium-1">$ 185,247.84/$ 999,999.00</span>
+                            </div>
+                            <div class="media-right media-middle">
+                                <i class="fa fa-money primary font-large-2 float-right"></i>
+                            </div>
+                        </div>
+                        <div class="progress progress-sm mt-1 mb-0">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 19%"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="media-body text-left w-100">
+                                <h3 class="red"> 1%</h3><span class="font-medium-1 display-block">February Expenses</span>                                <span class="font-medium-1">$ 10,750.00/$ 999,999.00</span>
+                            </div>
+                            <div class="media-right media-middle">
+                                <i class="ft-external-link red font-large-2 float-right"></i>
+                            </div>
+                        </div>
+                        <div class="progress progress-sm mt-1 mb-0">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 1%"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="media-body text-left w-100">
+                                <h3 class="blue"> 26%</h3><span class="font-medium-1 display-block">February Sales</span>                                <span class="font-medium-1">$ 263,596.42/$ 999,999.00</span>
+                            </div>
+                            <div class="media-right media-middle">
+                                <i class="ft-flag blue font-large-2 float-right"></i>
+                            </div>
+                        </div>
+                        <div class="progress progress-sm mt-1 mb-0">
+                            <div class="progress-bar bg-blue" role="progressbar" style="width: 26%"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+
+                    <div class="card-body">
+                        <div class="media">
+                            <div class="media-body text-left w-100">
+                                <h3 class="purple"> 17%</h3><span class="font-medium-1 display-block">February Net Income</span>                                <span class="font-medium-1">$ 174,497.84/$ 999,999.00</span>
+                            </div>
+                            <div class="media-right media-middle">
+                                <i class="ft-inbox purple font-large-2 float-right"></i>
+                            </div>
+                        </div>
+                        <div class="progress progress-sm mt-1 mb-0">
+                            <div class="progress-bar bg-purple" role="progressbar" style="width: 17%"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-xl-7 col-lg-12">
+        <div class="card" id="transactions">
+
+            <div class="card-body">
+                <h4>Cashflow</h4>
+                <p>Graphical Presentation of income and expenses have done in the last 30 days.</p>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="base-tab1" data-toggle="tab" aria-controls="tab1"
+                           href="#sales"
+                           aria-expanded="true">Income</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="base-tab2" data-toggle="tab" aria-controls="tab2"
+                           href="#transactions1"
+                           aria-expanded="false">Expenses</a>
+                    </li>
+
+
+                </ul>
+                <div class="tab-content pt-1">
+                    <div role="tabpanel" class="tab-pane active" id="sales" aria-expanded="true"
+                         data-toggle="tab">
+                        <div id="dashboard-income-chart"></div>
+
+                    </div>
+                    <div class="tab-pane" id="transactions1" data-toggle="tab" aria-expanded="false">
+                        <div id="dashboard-expense-chart"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-5 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Task Manager  <a
+                            href="https://pos.ultimatekode.com/manager/todo"><i
+                                class="icon-arrow-right deep-orange"></i></a></h4>
+            </div>
+
+            <div class="card-content">
+                <div id="daily-activity" class="">
+                    <table class="table table-striped table-bordered base-style table-responsive">
+                        <thead>
+                        <tr>
+                            <th>
+
+                            </th>
+
+                            <th>Activity</th>
+                            <th>Status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                         <tr>
+                                <td class="text-truncate">
+                                    <input id="t0" type="checkbox"  class="icheck-activity" value="1" checked>
+                                </td>
+                            
+                                <td class="text-truncate">transition B2C eyeballs</td>
+                                <td class="text-truncate"><span id="st0" class="badge badge-default task_Done">Done</span></td>
+                            </tr> <tr>
+                                <td class="text-truncate">
+                                    <input id="t1" type="checkbox"  class="icheck-activity" value="2" checked>
+                                </td>
+                            
+                                <td class="text-truncate">architect cutting-edge users</td>
+                                <td class="text-truncate"><span id="st1" class="badge badge-default task_Done">Done</span></td>
+                            </tr> <tr>
+                                <td class="text-truncate">
+                                    <input  id="t2" type="checkbox" id="icheck-input-1" class="icheck-activity" value="5" >
+                                </td>
+                            
+                                <td class="text-truncate">architect web-enabled initiatives</td>
+                                <td class="text-truncate"><span id="st2" class="badge badge-default task_Due">Due</span></td>
+                            </tr> <tr>
+                                <td class="text-truncate">
+                                    <input id="t3" type="checkbox"  class="icheck-activity" value="6" checked>
+                                </td>
+                            
+                                <td class="text-truncate">engage cross-media supply-chains</td>
+                                <td class="text-truncate"><span id="st3" class="badge badge-default task_Done">Done</span></td>
+                            </tr> <tr>
+                                <td class="text-truncate">
+                                    <input id="t4" type="checkbox"  class="icheck-activity" value="10" checked>
+                                </td>
+                            
+                                <td class="text-truncate">exploit collaborative schemas</td>
+                                <td class="text-truncate"><span id="st4" class="badge badge-default task_Done">Done</span></td>
+                            </tr> <tr>
+                                <td class="text-truncate">
+                                    <input id="t5" type="checkbox"  class="icheck-activity" value="11" checked>
+                                </td>
+                            
+                                <td class="text-truncate">syndicate impactful partnerships</td>
+                                <td class="text-truncate"><span id="st5" class="badge badge-default task_Done">Done</span></td>
+                            </tr> <tr>
+                                <td class="text-truncate">
+                                    <input id="t6" type="checkbox"  class="icheck-activity" value="12" checked>
+                                </td>
+                            
+                                <td class="text-truncate">aggregate proactive methodologies</td>
+                                <td class="text-truncate"><span id="st6" class="badge badge-default task_Done">Done</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row match-height">
+    <div class="col-xl-8 col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Recent <a
+                            href="https://pos.ultimatekode.com/transactions"
+                            class="btn btn-primary btn-sm rounded">Transactions</a>
+                </h4>
+                <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="reload"><i class="icon-reload"></i></a></li>
+                        <li><a data-action="expand"><i class="icon-expand2"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-hover mb-1">
+                        <thead>
+                        <tr>
+                            <th>Date#</th>
+                            <th>Account</th>
+                            <th>Debit</th>
+                            <th>Credit</th>
+
+                            <th>Method</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=97">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 1,124.15</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=96">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 419.35</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=95">17-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 469.58</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=93">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 1,225.86</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=92">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 19,565.00</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=91">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 419.35</td>                    
+                                <td class="text-truncate">Bank</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=90">16-02-2019</a></td>
+                                <td class="text-truncate"> Promo</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 500.00</td>                    
+                                <td class="text-truncate">Transfer</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=89">17-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 640.85</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=88">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 500.00</td>
+                                <td class="text-truncate">$ 0.00</td>                    
+                                <td class="text-truncate">Transfer</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=87">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 0.00</td>                    
+                                <td class="text-truncate">Transfer</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=86">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 1,352.29</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=85">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 0.00</td>                    
+                                <td class="text-truncate">Cash</td>
+                            </tr><tr>
+                                <td class="text-truncate"><a href="https://pos.ultimatekode.com/transactions/view?id=84">16-02-2019</a></td>
+                                <td class="text-truncate"> Sales Account</td>
+                                <td class="text-truncate">$ 0.00</td>
+                                <td class="text-truncate">$ 5,604.47</td>                    
+                                <td class="text-truncate">Card Swipe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-lg-12">
+        <div class="card">
+            <div class="card-header ">
+                <h4 class="card-title">Stock Alert</h4>
+
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item"><span class="badge badge-danger float-xs-right">40 </span> <a href="https://pos.ultimatekode.com/products/edit?id=2">Barley - Pearl  </a><small class="purple"> <i class="ft-map-pin"></i> Croatia</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">57 </span> <a href="https://pos.ultimatekode.com/products/edit?id=25">Beer - Sleemans Cream Ale  </a><small class="purple"> <i class="ft-map-pin"></i> Albania</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">15 </span> <a href="https://pos.ultimatekode.com/products/edit?id=5">Beets - Pickled  </a><small class="purple"> <i class="ft-map-pin"></i> Main WareHouse</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">0 </span> <a href="https://pos.ultimatekode.com/products/edit?id=50">Beets - Pickled  </a><small class="purple"> <i class="ft-map-pin"></i> USA</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">0 Pc</span> <a href="https://pos.ultimatekode.com/products/edit?id=62">BLUE BAND  </a><small class="purple"> <i class="ft-map-pin"></i> USA</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">91 </span> <a href="https://pos.ultimatekode.com/products/edit?id=39">Bowl 12 Oz - Showcase 92012  </a><small class="purple"> <i class="ft-map-pin"></i> Main WareHouse</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">22 </span> <a href="https://pos.ultimatekode.com/products/edit?id=27">Bread - Wheat Baguette  </a><small class="purple"> <i class="ft-map-pin"></i> France</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">52 </span> <a href="https://pos.ultimatekode.com/products/edit?id=14">Bread Country Roll  </a><small class="purple"> <i class="ft-map-pin"></i> Main WareHouse</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">18 </span> <a href="https://pos.ultimatekode.com/products/edit?id=24">Broom - Angled  </a><small class="purple"> <i class="ft-map-pin"></i> Main WareHouse</small>
+                                </li><li class="list-group-item"><span class="badge badge-danger float-xs-right">85 </span> <a href="https://pos.ultimatekode.com/products/edit?id=21">Cake - Sheet Strawberry  </a><small class="purple"> <i class="ft-map-pin"></i> Main WareHouse</small>
+                                </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(window).on("load", function () {
+        $('#recent-buyers').perfectScrollbar({
+            wheelPropagation: true
+        });
+        /********************************************
+         *               PRODUCTS SALES              *
+         ********************************************/
+        var sales_data = [
+            { y: '2019-02-16', sales: 236398, invoices: 87},{ y: '2019-02-15', sales: 8972, invoices: 8},{ y: '2019-02-12', sales: 933, invoices: 2},{ y: '2019-02-11', sales: 466, invoices: 1},{ y: '2019-02-10', sales: 466, invoices: 1},{ y: '2019-02-09', sales: 3012, invoices: 2},{ y: '2019-02-08', sales: 1161, invoices: 1},{ y: '2019-02-07', sales: 2389, invoices: 2},{ y: '2019-02-06', sales: 7285, invoices: 4},        ];
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        Morris.Area({
+            element: 'products-sales',
+            data: sales_data,
+            xkey: 'y',
+            ykeys: ['sales', 'invoices'],
+            labels: ['sales', 'invoices'],
+            behaveLikeLine: true,
+            xLabelFormat: function (x) { // <--- x.getMonth() returns valid index
+                var day = x.getDate();
+                var month = months[x.getMonth()];
+                return day + ' ' + month;
+            },
+            resize: true,
+            pointSize: 0,
+            pointStrokeColors: ['#00B5B8', '#FA8E57', '#F25E75'],
+            smooth: true,
+            gridLineColor: '#E4E7ED',
+            numLines: 6,
+            gridtextSize: 14,
+            lineWidth: 0,
+            fillOpacity: 0.9,
+            hideHover: 'auto',
+            lineColors: ['#00B5B8', '#F25E75']
+        });
+
+
+    });
+</script>
+<script type="text/javascript">
+    function drawIncomeChart(dataVisits) {
+        $('#dashboard-income-chart').empty();
+        Morris.Area({
+            element: 'dashboard-income-chart',
+            data: dataVisits,
+            xkey: 'x',
+            ykeys: ['y'],
+            ymin: 'auto 40',
+            labels: ['Amount'],
+            xLabels: "day",
+            hideHover: 'auto',
+            yLabelFormat: function (y) {
+                // Only integers
+                if (y === parseInt(y, 10)) {
+                    return y;
+                } else {
+                    return '';
+                }
+            },
+            resize: true,
+            lineColors: [
+                '#00A5A8',
+            ],
+            pointFillColors: [
+                '#00A5A8',
+            ],
+            fillOpacity: 0.4,
+        });
+    }
+
+    function drawExpenseChart(dataVisits2) {
+
+        $('#dashboard-expense-chart').empty();
+        Morris.Area({
+            element: 'dashboard-expense-chart',
+            data: dataVisits2,
+            xkey: 'x',
+            ykeys: ['y'],
+            ymin: 'auto 0',
+            labels: ['Amount'],
+            xLabels: "day",
+            hideHover: 'auto',
+            yLabelFormat: function (y) {
+                // Only integers
+                if (y === parseInt(y, 10)) {
+                    return y;
+                } else {
+                    return '';
+                }
+            },
+            resize: true,
+            lineColors: [
+                '#ff6e40',
+            ],
+            pointFillColors: [
+                '#34cea7',
+            ]
+        });
+    }
+
+    drawIncomeChart(dataVisits);
+    drawExpenseChart(dataVisits2);
+    $('#dashboard-sales-breakdown-chart').empty();
+    Morris.Donut({
+        element: 'dashboard-sales-breakdown-chart',
+        data: [{
+            label: "Income",
+            value: 185247 },
+            {
+                label: "Expenses",
+                value: 10750 }
+        ],
+        resize: true,
+        colors: ['#34cea7', '#ff6e40'],
+        gridTextSize: 6,
+        gridTextWeight: 400
+    });
+    $('a[data-toggle=tab').on('shown.bs.tab', function (e) {
+        window.dispatchEvent(new Event('resize'));
+    });
+</script></div>
+</div>
+</div>
+<!-- BEGIN VENDOR JS-->
+<script type="text/javascript">
+    $('[data-toggle="datepicker"]').datepicker({
+        autoHide: true,
+        format: 'dd-mm-yyyy'
+    });
+    $('[data-toggle="datepicker"]').datepicker('setDate', new Date());
+    $('#sdate').datepicker({autoHide: true, format: 'dd-mm-yyyy'});
+    $('#sdate').datepicker('setDate', '17-01-2019');
+    $('.date30').datepicker({autoHide: true, format: 'dd-mm-yyyy'});
+    $('.date30').datepicker('setDate', '17-01-2019');
+
+
+</script>
+<script src="https://pos.ultimatekode.com/app-assets/vendors/js/extensions/unslider-min.js"></script>
+<script src="https://pos.ultimatekode.com/app-assets/vendors/js/timeline/horizontal-timeline.js"></script>
+<script src="https://pos.ultimatekode.com/app-assets/js/core/app-menu.js"></script>
+<script src="https://pos.ultimatekode.com/app-assets/js/core/app.js"></script>
+<script type="text/javascript" src="https://pos.ultimatekode.com/app-assets/js/scripts/ui/breadcrumbs-with-stats.js"></script>
+<script src="https://pos.ultimatekode.com/assets/myjs/jquery-ui.js"></script>
+<script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+<script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/datatable/dataTables.buttons.min.js"></script>
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/datatable/buttons.bootstrap4.min.js"></script>
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/jszip.min.js"></script>
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/pdfmake.min.js"></script>
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/vfs_fonts.js"></script>
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/buttons.html5.min.js"></script>
+    <script src="https://pos.ultimatekode.com/app-assets/vendors/js/tables/buttons.print.min.js"></script>
+
+<script type="text/javascript">var dtformat = $('#hdata').attr('data-df');
+    var currency = $('#hdata').attr('data-curr');
+    ;</script>
+<script src="https://pos.ultimatekode.com/assets/myjs/custom.js?v=3.552"></script>
+<script src="https://pos.ultimatekode.com/assets/myjs/basic.js?v=3.552"></script>
+<script src="https://pos.ultimatekode.com/assets/myjs/control.js?v=3.552"></script>
+
+<script type="text/javascript">
+    $.ajax({
+
+        url: baseurl + 'manager/pendingtasks',
+        dataType: 'json',
+        success: function (data) {
+            $('#tasklist').html(data.tasks);
+            $('#taskcount').html(data.tcount);
+
+        },
+        error: function (data) {
+            $('#response').html('Error')
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+</html>
